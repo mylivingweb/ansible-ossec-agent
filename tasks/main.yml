@@ -50,6 +50,7 @@
   when: ossec_managed_server and check_keys.stat.exists == false and ossec_server_name|default("") != ""
   delegate_to: "{{ ossec_server_name }}"
   ignore_errors: yes
+  run_once: true
   tags:
     - config
 
@@ -58,7 +59,7 @@
   when: ossec_managed_server and check_keys.stat.exists == false and ossec_server_name|default("") == ""
 
 - name: "registering client"
-  shell: /var/ossec/bin/agent-auth -m {{ ossec_server_ip }} -p 1514
+  shell: /var/ossec/bin/agent-auth -m {{ ossec_server_ip }} -p 1515
          creates=/var/ossec/etc/client.keys
   tags:
     - config
@@ -70,6 +71,7 @@
   delegate_to: "{{ ossec_server_name }}"
   when: ossec_managed_server and check_keys.stat.exists == false and ossec_server_name|default("") != ""
   ignore_errors: yes
+  run_once: true
   tags:
     - config
 
