@@ -86,7 +86,7 @@
 - name: "Restarting ossec agent"
   shell: /var/ossec/bin/ossec-control stop
 
-  - name: "Restart ossec-agent from systemctl"
+- name: "Restart ossec-agent from systemctl"
   shell: systemctl restart ossec-agent
   when: ansible_os_family == "RedHat"
  
