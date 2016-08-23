@@ -26,13 +26,13 @@
 
 - name: Create systemd file for ossec-agent
   template: src={{ role_path }}/files/ossec-agent.service
-            dst=/usr/lib/systemd/system/ossec-agent.service
+            dest=/usr/lib/systemd/system/ossec-agent.service
             owner=root
             group=root
             mode=0644
 
 - name: Reload system daemon
   shell: systemctl daemon-reload
-  
+
 - name: enable ossec-agent daemon
   shell: systemctl enable ossec-agent
