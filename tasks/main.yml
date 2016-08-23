@@ -22,7 +22,7 @@
   when: ansible_os_family == "Debian"
 
 - name: "Installing the ossec-agent.conf"
-  template: src=var-ossec-etc-ossec-agent.conf.j2
+  template: src=templates/var-ossec-etc-ossec-agent.conf.j2
             dest=/var/ossec/etc/{{ ossec_agent_config_filename }}
             owner=root
             group=root
