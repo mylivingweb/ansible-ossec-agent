@@ -1,0 +1,16 @@
+[Unit]
+Description=OSSEC agent systemd file
+After=network.target
+ConditionPathExists=/var/ossec/bin
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/var/ossec/bin/ossec-control start
+ExecReload=/var/ossec/bin/ossec-control restart
+ExecStop=/var/ossec/bin/ossec-control stop
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=basic.target

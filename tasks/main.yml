@@ -82,3 +82,7 @@
   shell: /var/ossec/bin/ossec-control start
   delegate_to: "{{ ossec_server_name }}"
   when: ossec_managed_server
+
+- name: "Restarting ossec agent"
+  shell: /var/ossec/bin/ossec-control restart
+ 
