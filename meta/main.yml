@@ -1,14 +1,13 @@
 ---
 galaxy_info:
-  author: Werner Dijkerman
-  description: INstalling and maintaining the ossec-agent.
+  author: Matt
+  description: INstalling and maintaining the ossec-agent using wazuh.
   company: myCompany.Dotcom
   license: license (GPLv3)
   min_ansible_version: 1.4
   platforms:
   - name: EL
     versions:
-    - 5
     - 6
     - 7
   - name: Fedora

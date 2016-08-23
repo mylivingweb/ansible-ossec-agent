@@ -12,6 +12,7 @@
 - name: Set ossec deploy facts for RedHat
   set_fact:
     ossec_agent_config_filename: ossec-agent.conf
+    ossec_agent_repo_filename: wazuh-ossec.repo
     ossec_init_name: ossec-hids
   when: ansible_os_family == "RedHat"
 
@@ -53,7 +54,7 @@
   when: ossec_managed_server and check_keys.stat.exists == false and ossec_server_name|default("") == ""
 
 - name: "register client"
-  shell: /var/ossec/bin/agent-auth -m {{ ossec_server_ip }} -p 1515
+  shell: /var/ossec/bin/agent-auth -m {{ ossec_server_ip }} -p 1514
          creates=/var/ossec/etc/client.keys
   tags:
     - config

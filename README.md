@@ -1,7 +1,7 @@
-dj-wasabi.ossec-agent
+mylivingweb.ossec-agent
 =========
 
-This role will install and configure an ossec-agent on the server. When there there is an parameter `ossec_server_name` configured, it will delagate an action for automatically authenticate the agent. 
+This role will install and configure an ossec-agent on the server. When there there is an parameter `ossec_server_name` configured, it will delagate an action for automatically authenticate the agent. This role uses wazuh repo for ossec-hids. 
 
 Requirements
 ------------
@@ -46,6 +46,6 @@ Author Information
 
 Please send suggestion or pull requests to make this role better. 
 
-Github: https://github.com/dj-wasabi/ansible-ossec-agent
+Github: https://github.com/mylivingweb/ansible-ossec-agent
 
-mail: ikben [ at ] werner-dijkerman . nl
+mail: mylivingweb [ at ] gmail . com

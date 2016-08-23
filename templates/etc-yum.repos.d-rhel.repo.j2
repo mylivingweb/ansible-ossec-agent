@@ -1,7 +1,6 @@
-[{{ item.name }}]
-name={{ item.name }} - $basearch
-baseurl={{ item.url }}
-enabled={{ item.enabled }}
-gpgcheck={{ item.gpgcheck }}
-gpgkey={{ item.gpgkey }}
-
+[wazuh]
+name = WAZUH OSSEC Repository - www.wazuh.com
+baseurl = http://ossec.wazuh.com/el/$releasever/$basearch
+gpgcheck = 1
+gpgkey = http://ossec.wazuh.com/key/RPM-GPG-KEY-OSSEC
+enabled = 1
