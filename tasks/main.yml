@@ -12,7 +12,6 @@
 - name: Set ossec deploy facts for RedHat
   set_fact:
     ossec_agent_config_filename: ossec-agent.conf
-    ossec_agent_repo_filename: wazuh-ossec.repo
     ossec_init_name: ossec-hids
   when: ansible_os_family == "RedHat"
 
