@@ -84,5 +84,9 @@
   when: ossec_managed_server
 
 - name: "Restarting ossec agent"
-  shell: /var/ossec/bin/ossec-control restart
+  shell: /var/ossec/bin/ossec-control stop
+
+  - name: "Restart ossec-agent from systemctl"
+  shell: systemctl restart ossec-agent
+  when: ansible_os_family == "RedHat"
  
