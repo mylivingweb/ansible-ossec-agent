@@ -23,10 +23,10 @@
 
 - name: "Installing the ossec-agent.conf"
   template: src={{ role_path }}/templates/var-ossec-etc-ossec-agent.conf.j2
-            dest=/var/ossec/etc/{{ ossec_agent_config_filename }}
+            dest=/var/ossec/etc/ossec.conf
             owner=root
             group=root
-            mode=0644
+            mode=0400
   notify: restart ossec-agent
   tags:
     - init
