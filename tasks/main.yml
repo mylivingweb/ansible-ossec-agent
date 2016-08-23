@@ -27,7 +27,6 @@
             owner=root
             group=root
             mode=0400
-  notify: restart ossec-agent
   tags:
     - init
     - config
