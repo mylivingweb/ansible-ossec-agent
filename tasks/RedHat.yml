@@ -18,8 +18,8 @@
       name=https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ansible_distribution_major_version}}.noarch.rpm
       state=present
 
-- name: RedHat | Install ossec-hids-client
-  yum: pkg=ossec-hids-client
+- name: RedHat | Install ossec-hids-agent
+  yum: pkg=ossec-hids-agent
        state=present
   tags:
     - init
