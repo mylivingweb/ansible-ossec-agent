@@ -34,7 +34,7 @@ The following is an example how this role can be used:
 
     - hosts: all:!ossec-server.example.com
       roles:
-         - { role: dj-wasabi.ossec-agent, ossec_server_ip: 192.168.1.1, ossec_server_name: ossec-server.example.com }
+         - { role: mylivingweb.ossec-agent, ossec_server_ip: 192.168.1.1, ossec_server_name: ossec-server.example.com }
 
 License
 -------
